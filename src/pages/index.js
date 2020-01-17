@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import animateScrollTo from 'animated-scroll-to';
 import '../components/layout.css';
+import { programInfo } from '../programInfo';
 
 const IndexPage = () => {
 	const data = useStaticQuery(graphql`
@@ -67,6 +68,11 @@ const IndexPage = () => {
 		FormSubmitted(true);
 	};
 
+	const handleProgramLink = (e) => {
+		const link = e.target.value;
+		window.open(link);
+	};
+
 	return (
 		<div>
 			<SEO title="Home" />
@@ -82,28 +88,31 @@ const IndexPage = () => {
 			</div>
 			<header className="flex flex-col items-center mt-8">
 				<div className="flex flex-col items-center px-2 md:w-1/2">
-					<h1 className="font-normal">Fund Your Future</h1>
+					<h1 className="font-normal">Bootcamp Loans & Financing</h1>
 					<p className="text-center">
-						Bootcamps are a great investment in transforming your future. We partner with schools that help
-						you take control of your career - <br />
-						<strong className="text-secondary">without breaking the bank.</strong>
+						Ready to apply for financing and advance your career, without breaking the bank? Find the right
+						program to put you on the path to <strong className="text-secondary">long-term success.</strong>
 					</p>
-					<button
-						onClick={() => animateScrollTo(document.querySelector('.contact'))}
-						className="bg-secondary py-2 px-4 font-bold text-white rounded-full w-48 cursor-pointer"
-					>
-						Get More Info
-					</button>
+					<select defaultValue="default" className="w-48" onChange={handleProgramLink}>
+						<option value="default" disabled>
+							Select A School
+						</option>
+						{programInfo.map((program) => (
+							<option key={program.url} value={program.url}>
+								{program.name}
+							</option>
+						))}
+					</select>
 				</div>
 			</header>
 			<Img fluid={data.banner.childImageSharp.fluid} alt="Teal banner" />
 			<section className="flex flex-col md:flex-row md:justify-around md:items-center ">
 				<div className="md:w-1/3 p-4">
-					<h2 className="font-normal md:text-4xl">Wondering How To Pay For A Bootcamp?</h2>
+					<h2 className="font-normal md:text-4xl">Financial Aid To Transform Your Career</h2>
 					<p>
-						Education is a life-changing investment in your future & the career you've been dreaming of. We
-						make the dream attainable by helping you finance your education. Skills Fund provides the help
-						you deserve to build the career you want. Simple, straightforward bootcamp loans.
+						Searching for a school or already accepted and ready to learn more about financing? We vet every
+						accelerated learning program and only work with the best, so scroll through our list of partners
+						and find out how our loans can help you reach your goals.
 					</p>
 				</div>
 				<div className="md:w-1/4">
@@ -122,9 +131,24 @@ const IndexPage = () => {
 					<Img fluid={data.steps.childImageSharp.fluid} alt="Four steps to financing your education" />
 				</div>
 			</section>
+			<section className="py-8">
+				<div
+					className="yotpo yotpo-reviews-carousel"
+					data-background-color="transparent"
+					data-mode="top_rated"
+					data-type="site"
+					data-count="9"
+					data-show-bottomline="1"
+					data-autoplay-enabled="1"
+					data-autoplay-speed="3000"
+					data-show-navigation="1"
+				>
+					&nbsp;
+				</div>
+			</section>
 			<section className="px-4 py-8 flex flex-col items-center bg-primary-dark text-white">
 				<div className="flex flex-col items-center">
-					<h2 className="font-normal text-center md:text-4xl">We Work With Schools We Believe In</h2>
+					<h2 className="font-normal text-center md:text-4xl">Benefits of Our Partner Schools</h2>
 					<p className="md:w-1/2">
 						We evaluate school quality and only partner with programs worth your time and money. Our
 						education partners are committed to your success in the classroom and beyond. We look for:{' '}
@@ -151,21 +175,6 @@ const IndexPage = () => {
 					</div>
 				</div>
 			</section>
-			<section className="py-8">
-				<div
-					className="yotpo yotpo-reviews-carousel"
-					data-background-color="transparent"
-					data-mode="top_rated"
-					data-type="site"
-					data-count="9"
-					data-show-bottomline="1"
-					data-autoplay-enabled="1"
-					data-autoplay-speed="3000"
-					data-show-navigation="1"
-				>
-					&nbsp;
-				</div>
-			</section>
 			<section className="flex flex-col items-center my-8 contact">
 				<h2 className="font-normal text-center md:text-4xl">
 					Ready to transform your career? Have more questions?
@@ -179,17 +188,15 @@ const IndexPage = () => {
 						placeholder="Enter your email address"
 						required
 					/>
-					<label htmlfor="stage">What are your next steps?</label>
-					<select className="mb-4 border-2 border-black p-2 w-64" id="stage">
-						<option disabled selected>
-							Select an option
-						</option>
+					<label htmlFor="stage">What are your next steps?</label>
+					<select defaultValue="default" className="mb-4 border-2 border-black p-2 w-64" id="stage">
+						<option value="default">Select an option</option>
 						<option>Researching different programs</option>
 						<option>Researching different schools</option>
 						<option>Applying to a school</option>
 						<option>Applying for financing</option>
 					</select>
-					<label htmlfor="comments">Questions/Comments</label>
+					<label htmlFor="comments">Questions/Comments</label>
 					<textarea
 						className="mb-4 border-2 border-black p-2 h-24 w-64"
 						id="comments"
