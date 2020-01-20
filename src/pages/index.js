@@ -63,7 +63,7 @@ const IndexPage = () => {
 	`);
 
 	const [ isFormSubmitted, FormSubmitted ] = useState(false);
-	const [ programLink, setProgramLink ] = useState(programInfo[0]['value']);
+	const [ programLink, setProgramLink ] = useState('');
 	const [ navBackground, setNavBackground ] = useState(false);
 	const navRef = useRef();
 
