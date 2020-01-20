@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import animateScrollTo from 'animated-scroll-to';
 import Select from 'react-select';
 import SEO from '../components/seo';
 import '../components/layout.css';
@@ -65,6 +64,11 @@ const IndexPage = () => {
 	const [ isFormSubmitted, FormSubmitted ] = useState(false);
 	const [ programLink, setProgramLink ] = useState('');
 	const [ navBackground, setNavBackground ] = useState(false);
+	const [ values, setValues ] = useState({
+		email: '',
+		stage: '',
+		comments: ''
+	});
 	const navRef = useRef();
 
 	navRef.current = navBackground;
@@ -81,14 +85,40 @@ const IndexPage = () => {
 		};
 	}, []);
 
+	const handleInputChange = (e) => {
+		const { name, value } = e.target;
+		setValues({ ...values, [name]: value });
+	};
+
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
+		const form = e.target;
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: encode({
+				'form-name': form.getAttribute('name'),
+				...values
+			})
+		})
+			.then(
+				setValues({
+					email: '',
+					stage: '',
+					comments: ''
+				})
+			)
+			.catch((error) => alert(error));
 		FormSubmitted(true);
 	};
 
 	const handleProgramLink = (selectedOption) => {
 		setProgramLink(selectedOption.value);
 	};
+
+	function encode(data) {
+		return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
+	}
 
 	return (
 		<div className="">
@@ -125,7 +155,6 @@ const IndexPage = () => {
 						<Select
 							value={programLink.label}
 							className="w-48 mb-4 md:mb-0 md:mr-4"
-							autoFocus="true"
 							onChange={handleProgramLink}
 							options={programInfo}
 							placeholder="School name"
@@ -233,17 +262,35 @@ const IndexPage = () => {
 				<h2 className="font-normal text-center md:text-4xl">
 					Ready to transform your career? Have more questions?
 				</h2>
-				<form className="flex flex-col items-center">
+				<form
+					name="apply-skills-fund"
+					method="post"
+					data-netlify="true"
+					data-netlify-honeypot="bot-field"
+					className="flex flex-col items-center w-full md:w-1/2"
+					onSubmit={handleFormSubmit}
+				>
+					<input type="hidden" name="form-name" value="apply-skills-fund" />
 					<label htmlFor="email">Email address</label>
 					<input
-						className="mb-4 border-2 border-black p-2 w-64"
+						className="mb-4 border-2 border-black p-2 w-full"
 						type="email"
 						id="email"
+						name="email"
 						placeholder="Enter your email address"
 						required
+						onChange={handleInputChange}
+						onBlur={handleInputChange}
 					/>
 					<label htmlFor="stage">What are your next steps?</label>
-					<select defaultValue="default" className="mb-4 border-2 border-black p-2 w-64" id="stage">
+					<select
+						onChange={handleInputChange}
+						onBlur={handleInputChange}
+						defaultValue="default"
+						className="mb-4 border-2 border-black p-2 w-full"
+						id="stage"
+						name="stage"
+					>
 						<option value="default">Select an option</option>
 						<option>Researching different programs</option>
 						<option>Researching different schools</option>
@@ -252,16 +299,23 @@ const IndexPage = () => {
 					</select>
 					<label htmlFor="comments">Questions/Comments</label>
 					<textarea
-						className="mb-4 border-2 border-black p-2 h-24 w-64"
+						className="mb-4 border-2 border-black p-2 h-24 w-full"
 						id="comments"
+						name="comments"
 						placeholder="Enter any questions or comments for our customer trust team"
+						onChange={handleInputChange}
+						onBlur={handleInputChange}
 					/>
-					<input
-						className="bg-secondary py-2 px-4 font-bold text-white rounded-full w-48 cursor-pointer"
-						type="submit"
-						value="Submit"
-						onClick={handleFormSubmit}
-					/>
+					{isFormSubmitted ? (
+						<p>Thanks for contacting us! We'll be touch shortly!</p>
+					) : (
+						<input
+							className="bg-secondary py-2 px-4 font-bold text-white rounded-full w-48 cursor-pointer"
+							type="submit"
+							value="Submit"
+							onClick={handleFormSubmit}
+						/>
+					)}
 				</form>
 			</section>
 		</div>
