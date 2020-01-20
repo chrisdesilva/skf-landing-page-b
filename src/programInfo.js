@@ -176,6 +176,10 @@ export const programInfo = [
 		value: 'https://learningfuze.skills.fund'
 	},
 	{
+		label: 'MAX Technical Training',
+		value: 'https://maxtrain.skills.fund'
+	},
+	{
 		label: 'Metis',
 		value: 'https://thisismetis.skills.fund'
 	},
