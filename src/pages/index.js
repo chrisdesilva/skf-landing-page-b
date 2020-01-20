@@ -319,6 +319,16 @@ const IndexPage = () => {
 						/>
 					)}
 				</form>
+				<form name="apply-skills-fund" data-netlify="true" netlify-honeypot="bot-field" hidden>
+					<input type="email" name="email" />
+					<select name="stage">
+						<option name="Researching different programs" />
+						<option name="Researching different schools" />
+						<option name="Applying to a school" />
+						<option name="Applying for financing" />
+					</select>
+					<textarea name="comments" />
+				</form>
 			</section>
 		</div>
 	);
