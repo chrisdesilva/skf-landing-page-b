@@ -9,7 +9,7 @@ export const programInfo = [
 	},
 	{
 		label: 'ADAPT',
-		value: 'https://adapt.skills.fund'
+		value: 'https://adaptdental.skills.fund'
 	},
 	{
 		label: 'ADTC',
