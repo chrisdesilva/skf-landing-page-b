@@ -90,6 +90,10 @@ select {
 	}
 }
 
+.logo {
+	transition: all .5s;
+}
+
 html {
 	font-family: 'Work Sans', sans-serif;
 }

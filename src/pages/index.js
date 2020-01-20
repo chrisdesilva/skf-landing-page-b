@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import animateScrollTo from 'animated-scroll-to';
@@ -64,6 +64,22 @@ const IndexPage = () => {
 
 	const [ isFormSubmitted, FormSubmitted ] = useState(false);
 	const [ programLink, setProgramLink ] = useState(programInfo[0]['value']);
+	const [ navBackground, setNavBackground ] = useState(false);
+	const navRef = useRef();
+
+	navRef.current = navBackground;
+	useEffect(() => {
+		const handleScroll = () => {
+			const show = window.scrollY > 300;
+			if (navRef.current !== show) {
+				setNavBackground(show);
+			}
+		};
+		document.addEventListener('scroll', handleScroll);
+		return () => {
+			document.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
@@ -79,11 +95,19 @@ const IndexPage = () => {
 			<SEO title="Home" />
 			<nav className="flex fixed w-full z-10 bg-white px-2">
 				<div className="w-1/2 py-4 my-auto">
-					<Img className="w-32" fluid={data.logo.childImageSharp.fluid} alt="Skills Fund logo" />
+					<Img
+						className={navBackground ? 'w-32 logo' : 'w-40 logo'}
+						fluid={data.logo.childImageSharp.fluid}
+						alt="Skills Fund logo"
+					/>
 				</div>
-				<div className="py-4 w-1/2 flex justify-end">
+				<div
+					className={
+						navBackground ? 'py-4 w-1/2 flex justify-end show' : 'py-4 w-1/2 flex justify-end opacity-0'
+					}
+				>
 					<a
-						href="https://my.skills.fund"
+						href="https://my.skills.fund/register"
 						className="bg-secondary py-2 px-4 font-bold text-white text-center w-32 rounded-full cursor-pointer"
 					>
 						Apply Now
@@ -97,12 +121,28 @@ const IndexPage = () => {
 						Ready to apply for financing for your bootcamp? Choose your school to put you on the path to{' '}
 						<strong className="text-secondary">long-term success.</strong>
 					</p>
-					<Select
-						value={programLink.label}
-						className="w-48"
-						onChange={handleProgramLink}
-						options={programInfo}
-					/>
+					<div className="flex flex-col md:flex-row items-center">
+						<Select
+							value={programLink.label}
+							className="w-48 mb-4 md:mb-0 md:mr-4"
+							autoFocus="true"
+							onChange={handleProgramLink}
+							options={programInfo}
+							placeholder="School name"
+						/>
+						<a
+							href="https://my.skills.fund/register"
+							className={
+								navBackground ? (
+									'bg-secondary py-2 px-4 font-bold text-white text-center w-32 rounded-full cursor-pointer opacity-0'
+								) : (
+									'bg-secondary py-2 px-4 font-bold text-white text-center w-32 rounded-full cursor-pointer show'
+								)
+							}
+						>
+							Apply Now
+						</a>
+					</div>
 					<a
 						className={
 							programLink ? (
@@ -123,7 +163,10 @@ const IndexPage = () => {
 					<h2 className="font-normal md:text-4xl">Loans to Transform your Career</h2>
 					<p>
 						Already know which school you plan to attend? Get started on your application. Not quite sure
-						which program you plan to attend? Compare your options here.
+						which program you plan to attend? Compare your options{' '}
+						<a href="https://skills.fund/students" className="text-secondary font-bold">
+							here
+						</a>.
 					</p>
 				</div>
 				<div className="md:w-1/4">
