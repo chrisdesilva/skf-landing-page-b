@@ -47,6 +47,49 @@ select {
 	}
 }
 
+@-moz-keyframes formsubmit {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: .5;
+		transform: scale(1, .5);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+.show {
+	animation-name: show;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes show {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 html {
 	font-family: 'Work Sans', sans-serif;
 }
@@ -265,7 +308,7 @@ img {
 	padding-left: 0;
 	padding-right: 0;
 	padding-top: 0;
-	margin-bottom: 1.45rem;
+	margin-bottom: 0;
 }
 h1 {
 	margin-left: 0;

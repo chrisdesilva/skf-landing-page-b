@@ -62,6 +62,7 @@ const IndexPage = () => {
 	`);
 
 	const [ isFormSubmitted, FormSubmitted ] = useState(false);
+	const [ programLink, setProgramLink ] = useState('');
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
@@ -70,56 +71,73 @@ const IndexPage = () => {
 
 	const handleProgramLink = (e) => {
 		const link = e.target.value;
-		window.open(link);
+		setProgramLink(link);
 	};
 
 	return (
-		<div>
+		<div className="">
 			<SEO title="Home" />
-			<div className="flex justify-between">
-				<div className="w-48 ml-4 mt-4">
-					<Img fluid={data.logo.childImageSharp.fluid} alt="Skills Fund logo" />
+			<nav className="flex fixed w-full z-10 bg-white px-2">
+				<div className="w-1/2 py-4 my-auto">
+					<Img className="w-32" fluid={data.logo.childImageSharp.fluid} alt="Skills Fund logo" />
 				</div>
-				<div className="mr-4 mt-4">
-					<button className="bg-secondary py-2 px-4 font-bold text-white rounded-full w-48 cursor-pointer">
+				<div className="py-4 w-1/2 flex justify-end">
+					<a
+						href="https://my.skills.fund"
+						className="bg-secondary py-2 px-4 font-bold text-white text-center w-32 rounded-full cursor-pointer"
+					>
 						Apply Now
-					</button>
+					</a>
 				</div>
-			</div>
-			<header className="flex flex-col items-center mt-8">
-				<div className="flex flex-col items-center px-2 md:w-1/2">
-					<h1 className="font-normal">Bootcamp Loans & Financing</h1>
+			</nav>
+			<header className="flex flex-col items-center">
+				<div className="flex flex-col items-center px-2 md:w-1/2 mt-32">
+					<h1 className="font-normal text-center">Pay for your Bootcamp</h1>
 					<p className="text-center">
-						Ready to apply for financing and advance your career, without breaking the bank? Find the right
-						program to put you on the path to <strong className="text-secondary">long-term success.</strong>
+						Ready to apply for financing for your bootcamp? Choose your school to put you on the path to{' '}
+						<strong className="text-secondary">long-term success.</strong>
 					</p>
-					<select defaultValue="default" className="w-48" onChange={handleProgramLink}>
-						<option value="default" disabled>
-							Select A School
-						</option>
-						{programInfo.map((program) => (
-							<option key={program.url} value={program.url}>
-								{program.name}
+					<label htmlFor="schools">
+						Select a school
+						<select id="schools" defaultValue="default" className="w-48" onChange={handleProgramLink}>
+							<option value="default" disabled>
+								---------------
 							</option>
-						))}
-					</select>
+							{programInfo.map((program) => (
+								<option key={program.url} value={program.url}>
+									{program.name}
+								</option>
+							))}
+						</select>
+					</label>
+					<a
+						className={
+							programLink ? (
+								'mt-5 text-secondary underline show'
+							) : (
+								'mt-5 text-secondary underline opacity-0'
+							)
+						}
+						href={programLink}
+					>
+						Learn More
+					</a>
 				</div>
 			</header>
 			<Img fluid={data.banner.childImageSharp.fluid} alt="Teal banner" />
 			<section className="flex flex-col md:flex-row md:justify-around md:items-center ">
 				<div className="md:w-1/3 p-4">
-					<h2 className="font-normal md:text-4xl">Financial Aid To Transform Your Career</h2>
+					<h2 className="font-normal md:text-4xl">Loans to Transform your Career</h2>
 					<p>
-						Searching for a school or already accepted and ready to learn more about financing? We vet every
-						accelerated learning program and only work with the best, so scroll through our list of partners
-						and find out how our loans can help you reach your goals.
+						Already know which school you plan to attend? Get started on your application. Not quite sure
+						which program you plan to attend? Compare your options here.
 					</p>
 				</div>
 				<div className="md:w-1/4">
 					<Img fluid={data.climbers.childImageSharp.fluid} alt="Students on top of stacks of books" />
 				</div>
 			</section>
-			<section className="flex flex-col items-center mt-8">
+			<section className="flex flex-col items-center mt-8 px-2">
 				<div className="md:w-1/3">
 					<h2 className="font-normal text-center md:text-4xl">How Skills Fund Works</h2>
 					<p>
@@ -154,20 +172,20 @@ const IndexPage = () => {
 						education partners are committed to your success in the classroom and beyond. We look for:{' '}
 					</p>
 				</div>
-				<div className="flex px-8">
-					<div className="w-1/3 flex flex-col items-center">
+				<div className="flex flex-col items-center justify-center md:flex-row md:px-8">
+					<div className="md:w-1/3 flex flex-col items-center">
 						<div className="w-24 border-2 border-white rounded-full mb-4 bg-white">
 							<Img fluid={data.certificate.childImageSharp.fluid} alt="Certificate of achievement" />
 						</div>
 						<p className="text-center">High quality of curriculum</p>
 					</div>
-					<div className="w-1/3 flex flex-col items-center">
+					<div className="md:w-1/3 flex flex-col items-center">
 						<div className="w-24 border-2 border-white rounded-full mb-4 bg-white">
 							<Img fluid={data.pull.childImageSharp.fluid} alt="Four people using a pulley" />
 						</div>
 						<p className="text-center">Action-oriented career services </p>
 					</div>
-					<div className="w-1/3 flex flex-col items-center">
+					<div className="md:w-1/3 flex flex-col items-center">
 						<div className="w-24 border-2 border-white rounded-full mb-4 bg-white">
 							<Img fluid={data.finishLine.childImageSharp.fluid} alt="Crossing the finish line" />
 						</div>
@@ -175,7 +193,7 @@ const IndexPage = () => {
 					</div>
 				</div>
 			</section>
-			<section className="flex flex-col items-center my-8 contact">
+			<section className="flex flex-col items-center my-8 contact px-2">
 				<h2 className="font-normal text-center md:text-4xl">
 					Ready to transform your career? Have more questions?
 				</h2>
