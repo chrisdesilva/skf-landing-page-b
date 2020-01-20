@@ -281,6 +281,7 @@ const IndexPage = () => {
 						required
 						onChange={handleInputChange}
 						onBlur={handleInputChange}
+						value={values.email}
 					/>
 					<label htmlFor="stage">What are your next steps?</label>
 					<select
@@ -290,6 +291,7 @@ const IndexPage = () => {
 						className="mb-4 border-2 border-black p-2 w-full"
 						id="stage"
 						name="stage"
+						value={values.stage}
 					>
 						<option value="default">Select an option</option>
 						<option>Researching different programs</option>
@@ -305,6 +307,7 @@ const IndexPage = () => {
 						placeholder="Enter any questions or comments for our customer trust team"
 						onChange={handleInputChange}
 						onBlur={handleInputChange}
+						value={values.comments}
 					/>
 					{isFormSubmitted ? (
 						<p>Thanks for contacting us! We'll be touch shortly!</p>
