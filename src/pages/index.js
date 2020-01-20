@@ -61,6 +61,9 @@ const IndexPage = () => {
 		}
 	`);
 
+	function encode(data) {
+		return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
+	}
 	const [ isFormSubmitted, FormSubmitted ] = useState(false);
 	const [ programLink, setProgramLink ] = useState('');
 	const [ navBackground, setNavBackground ] = useState(false);
@@ -115,10 +118,6 @@ const IndexPage = () => {
 	const handleProgramLink = (selectedOption) => {
 		setProgramLink(selectedOption.value);
 	};
-
-	function encode(data) {
-		return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
-	}
 
 	return (
 		<div className="">
