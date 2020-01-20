@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import SEO from '../components/seo';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import animateScrollTo from 'animated-scroll-to';
+import Select from 'react-select';
+import SEO from '../components/seo';
 import '../components/layout.css';
 import { programInfo } from '../programInfo';
 
@@ -62,16 +63,15 @@ const IndexPage = () => {
 	`);
 
 	const [ isFormSubmitted, FormSubmitted ] = useState(false);
-	const [ programLink, setProgramLink ] = useState('');
+	const [ programLink, setProgramLink ] = useState(programInfo[0]['value']);
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
 		FormSubmitted(true);
 	};
 
-	const handleProgramLink = (e) => {
-		const link = e.target.value;
-		setProgramLink(link);
+	const handleProgramLink = (selectedOption) => {
+		setProgramLink(selectedOption.value);
 	};
 
 	return (
@@ -97,19 +97,12 @@ const IndexPage = () => {
 						Ready to apply for financing for your bootcamp? Choose your school to put you on the path to{' '}
 						<strong className="text-secondary">long-term success.</strong>
 					</p>
-					<label htmlFor="schools">
-						Select a school
-						<select id="schools" defaultValue="default" className="w-48" onChange={handleProgramLink}>
-							<option value="default" disabled>
-								---------------
-							</option>
-							{programInfo.map((program) => (
-								<option key={program.url} value={program.url}>
-									{program.name}
-								</option>
-							))}
-						</select>
-					</label>
+					<Select
+						value={programLink.label}
+						className="w-48"
+						onChange={handleProgramLink}
+						options={programInfo}
+					/>
 					<a
 						className={
 							programLink ? (

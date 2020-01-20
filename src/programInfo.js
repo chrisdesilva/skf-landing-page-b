@@ -1,18 +1,22 @@
 export const programInfo = [
 	{
-		name: 'Coding Dojo',
-		url: 'https://codingdojo.skills.fund'
+		label: 'Select your school',
+		value: ''
 	},
 	{
-		name: 'Flatiron',
-		url: 'https://flatironschool.skills.fund'
+		label: 'Coding Dojo',
+		value: 'https://codingdojo.skills.fund'
 	},
 	{
-		name: 'Thinkful',
-		url: 'https://thinkful.skills.fund'
+		label: 'Flatiron',
+		value: 'https://flatironschool.skills.fund'
 	},
 	{
-		name: 'Tech Elevator',
-		url: 'https://techelevator.skills.fund'
+		label: 'Thinkful',
+		value: 'https://thinkful.skills.fund'
+	},
+	{
+		label: 'Tech Elevator',
+		value: 'https://techelevator.skills.fund'
 	}
 ];
