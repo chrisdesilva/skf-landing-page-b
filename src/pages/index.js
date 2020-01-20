@@ -269,6 +269,7 @@ const IndexPage = () => {
 					className="flex flex-col items-center w-full md:w-1/2"
 					onSubmit={handleFormSubmit}
 				>
+					<input type="hidden" name="bot-field" />
 					<input type="hidden" name="form-name" value="apply-skills-fund" />
 					<label htmlFor="email">Email address</label>
 					<input
