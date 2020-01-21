@@ -61,9 +61,6 @@ const IndexPage = () => {
 		}
 	`);
 
-	const encode = (data) => {
-		return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
-	};
 	const [ isFormSubmitted, FormSubmitted ] = useState(false);
 	const [ programLink, setProgramLink ] = useState('');
 	const [ navBackground, setNavBackground ] = useState(false);
@@ -71,6 +68,18 @@ const IndexPage = () => {
 		email: '',
 		stage: '',
 		comments: ''
+	});
+
+	const [ IP, setIP ] = useState('');
+
+	// Get IP address from client for Hubspot analytics
+	async function fetchIP() {
+		const res = await fetch('https://ip.nf/me.json');
+		res.json().then((res) => setIP(res.ip.ip)).catch((err) => console.log(err));
+	}
+
+	useEffect(() => {
+		fetchIP();
 	});
 	const navRef = useRef();
 
@@ -95,23 +104,49 @@ const IndexPage = () => {
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
-		const form = e.target;
-		fetch('/', {
+		const url = `https://api.hsforms.com/submissions/v3/integration/submit/3871135/e1d66c17-474b-4ff4-a302-076223691c3f`;
+
+		// hsCookie gets the data necessary to track Hubspot analytics
+		const hsCookie = document.cookie.split(';').reduce((cookies, cookie) => {
+			const [ name, value ] = cookie.split('=').map((c) => c.trim());
+			cookies[name] = value;
+			return cookies;
+		}, {});
+
+		//   field names are all set to match internal values on Hubspot
+		const data = {
+			fields: [
+				{
+					name: 'email',
+					value: `${values.email}`
+				},
+				{
+					name: 'next_steps',
+					value: `${values.stage}`
+				},
+				{
+					name: 'comments',
+					value: `${values.comments}`
+				}
+			],
+			context: {
+				hutk: hsCookie.hubspotutk,
+				pageUri: `https://apply.skills.fund`,
+				pageName: `Landing Page B`,
+				ipAddress: `${IP}`
+			}
+		};
+
+		fetch(url, {
 			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({
-				'form-name': form.getAttribute('name'),
-				...values
-			})
+			body: JSON.stringify(data),
+			headers: {
+				'Content-Type': 'application/json'
+			}
 		})
-			.then(
-				setValues({
-					email: '',
-					stage: '',
-					comments: ''
-				})
-			)
-			.catch((error) => console.log(error));
+			.then((res) => res.json())
+			.then((response) => console.log('success', response))
+			.catch((error) => console.log('error: ', error));
 		FormSubmitted(true);
 	};
 
@@ -236,24 +271,30 @@ const IndexPage = () => {
 						education partners are committed to your success in the classroom and beyond. We look for:{' '}
 					</p>
 				</div>
-				<div className="flex flex-col items-center justify-center md:flex-row md:px-8">
+				<div className="flex flex-col md:flex-row md:p-8 w-full">
 					<div className="md:w-1/3 flex flex-col items-center">
 						<div className="w-24 border-2 border-white rounded-full mb-4 bg-white">
 							<Img fluid={data.certificate.childImageSharp.fluid} alt="Certificate of achievement" />
 						</div>
-						<p className="text-center">Excellent curriculum and instruction</p>
+						<p className="text-center">
+							Excellent curriculum<br /> and instruction
+						</p>
 					</div>
 					<div className="md:w-1/3 flex flex-col items-center">
 						<div className="w-24 border-2 border-white rounded-full mb-4 bg-white">
 							<Img fluid={data.pull.childImageSharp.fluid} alt="Four people using a pulley" />
 						</div>
-						<p className="text-center">Action-oriented career services </p>
+						<p className="text-center">
+							Action-oriented <br /> career services{' '}
+						</p>
 					</div>
 					<div className="md:w-1/3 flex flex-col items-center">
 						<div className="w-24 border-2 border-white rounded-full mb-4 bg-white">
 							<Img fluid={data.finishLine.childImageSharp.fluid} alt="Crossing the finish line" />
 						</div>
-						<p className="text-center">Impressive student outcomes</p>
+						<p className="text-center">
+							Impressive student <br /> outcomes
+						</p>
 					</div>
 				</div>
 			</section>
@@ -262,13 +303,9 @@ const IndexPage = () => {
 				<form
 					name="apply-skills-fund"
 					method="post"
-					data-netlify="true"
-					data-netlify-honeypot="bot-field"
 					className="flex flex-col items-center w-full md:w-1/2"
 					onSubmit={handleFormSubmit}
 				>
-					<input type="hidden" name="bot-field" />
-					<input type="hidden" name="form-name" value="apply-skills-fund" />
 					<label htmlFor="email">Email address</label>
 					<input
 						className="mb-4 border-2 border-black p-2 w-full"
@@ -285,17 +322,16 @@ const IndexPage = () => {
 					<select
 						onChange={handleInputChange}
 						onBlur={handleInputChange}
-						defaultValue="default"
 						className="mb-4 border-2 border-black p-2 w-full"
 						id="stage"
 						name="stage"
 						value={values.stage}
 					>
-						<option value="default">Select an option</option>
-						<option>Researching schools or programs</option>
-						<option>Researching financing optionss</option>
-						<option>Applying to a school</option>
-						<option>Applying for financing</option>
+						<option>Select an option</option>
+						<option value="Researching schools or programs">Researching schools or programs</option>
+						<option value="Researching financing options">Researching financing options</option>
+						<option value="Applying to a school">Applying to a school</option>
+						<option value="Applying for financing">Applying for financing</option>
 					</select>
 					<label htmlFor="comments">Questions/Comments</label>
 					<textarea
@@ -316,16 +352,6 @@ const IndexPage = () => {
 							value="Submit"
 						/>
 					)}
-				</form>
-				<form name="apply-skills-fund" data-netlify="true" netlify-honeypot="bot-field" hidden>
-					<input type="email" name="email" />
-					<select name="stage">
-						<option name="Researching different programs" />
-						<option name="Researching different schools" />
-						<option name="Applying to a school" />
-						<option name="Applying for financing" />
-					</select>
-					<textarea name="comments" />
 				</form>
 			</section>
 		</div>
