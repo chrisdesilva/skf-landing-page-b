@@ -258,9 +258,7 @@ const IndexPage = () => {
 				</div>
 			</section>
 			<section className="flex flex-col items-center my-8 contact px-2">
-				<h2 className="font-normal text-center md:text-4xl">
-					Ready to transform your career? Have more questions?
-				</h2>
+				<h2 className="font-normal text-center md:text-4xl">Have questions? We can help.</h2>
 				<form
 					name="apply-skills-fund"
 					method="post"
@@ -283,7 +281,7 @@ const IndexPage = () => {
 						onBlur={handleInputChange}
 						value={values.email}
 					/>
-					<label htmlFor="stage">Have questions? We can help.</label>
+					<label htmlFor="stage">What are your next steps?</label>
 					<select
 						onChange={handleInputChange}
 						onBlur={handleInputChange}
