@@ -145,7 +145,7 @@ const IndexPage = () => {
 			</nav>
 			<header className="flex flex-col items-center">
 				<div className="flex flex-col items-center px-2 md:w-1/2 mt-32">
-					<h1 className="font-normal text-center">Pay for your Bootcamp</h1>
+					<h1 className="font-normal text-center">Pay for Your Bootcamp</h1>
 					<p className="text-center">
 						Ready to apply for financing for your bootcamp? Choose your school to put you on the path to{' '}
 						<strong className="text-secondary">long-term success.</strong>
@@ -241,7 +241,7 @@ const IndexPage = () => {
 						<div className="w-24 border-2 border-white rounded-full mb-4 bg-white">
 							<Img fluid={data.certificate.childImageSharp.fluid} alt="Certificate of achievement" />
 						</div>
-						<p className="text-center">High quality of curriculum</p>
+						<p className="text-center">Excellent curriculum and instruction</p>
 					</div>
 					<div className="md:w-1/3 flex flex-col items-center">
 						<div className="w-24 border-2 border-white rounded-full mb-4 bg-white">
@@ -283,7 +283,7 @@ const IndexPage = () => {
 						onBlur={handleInputChange}
 						value={values.email}
 					/>
-					<label htmlFor="stage">What are your next steps?</label>
+					<label htmlFor="stage">Have questions? We can help.</label>
 					<select
 						onChange={handleInputChange}
 						onBlur={handleInputChange}
@@ -294,8 +294,8 @@ const IndexPage = () => {
 						value={values.stage}
 					>
 						<option value="default">Select an option</option>
-						<option>Researching different programs</option>
-						<option>Researching different schools</option>
+						<option>Researching schools or programs</option>
+						<option>Researching financing optionss</option>
 						<option>Applying to a school</option>
 						<option>Applying for financing</option>
 					</select>
@@ -316,7 +316,6 @@ const IndexPage = () => {
 							className="bg-secondary py-2 px-4 font-bold text-white rounded-full w-48 cursor-pointer"
 							type="submit"
 							value="Submit"
-							onClick={handleFormSubmit}
 						/>
 					)}
 				</form>

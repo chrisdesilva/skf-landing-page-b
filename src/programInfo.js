@@ -80,10 +80,6 @@ export const programInfo = [
 		value: 'https://designation.skills.fund'
 	},
 	{
-		label: 'Coding Dojo',
-		value: 'https://codingdojo.skills.fund'
-	},
-	{
 		label: 'devCodeCamp',
 		value: 'https://devcodecamp.skills.fund'
 	},
