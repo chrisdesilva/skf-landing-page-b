@@ -131,6 +131,10 @@ const IndexPage = () => {
 				{
 					name: 'stakeholder_type',
 					value: 'Student'
+				},
+				{
+					name: 'lead_form_submit_page',
+					value: 'Lower Funnel'
 				}
 			],
 			context: {
@@ -349,6 +353,7 @@ const IndexPage = () => {
 					/>
 					<div className="hidden">
 						<input type="text" name="Stakeholder Type" value="Student" readOnly />
+						<input type="text" name="Lead Form Submit Page" value="Lower Funnel" readOnly />
 					</div>
 					{isFormSubmitted ? (
 						<p>Thanks for contacting us! We'll be touch shortly!</p>
