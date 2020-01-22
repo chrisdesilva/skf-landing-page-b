@@ -165,7 +165,15 @@ const IndexPage = () => {
 	return (
 		<div className="">
 			<SEO title="Home" />
-			<nav className="flex fixed w-full z-10 bg-white px-2">
+			<nav
+				className={
+					navBackground ? (
+						'flex fixed w-full z-10 bg-white px-2 shadow-xl logo'
+					) : (
+						'flex fixed w-full z-10 bg-white px-2 logo'
+					)
+				}
+			>
 				<div className="w-1/2 py-4 my-auto">
 					<Img
 						className={navBackground ? 'w-32 logo' : 'w-40 logo'}
