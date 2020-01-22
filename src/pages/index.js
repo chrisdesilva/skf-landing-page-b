@@ -127,6 +127,10 @@ const IndexPage = () => {
 				{
 					name: 'comments',
 					value: `${values.comments}`
+				},
+				{
+					name: 'stakeholder_type',
+					value: 'Student'
 				}
 			],
 			context: {
@@ -180,10 +184,10 @@ const IndexPage = () => {
 			</nav>
 			<header className="flex flex-col items-center">
 				<div className="flex flex-col items-center px-2 md:w-1/2 mt-32">
-					<h1 className="font-normal text-center">Pay for Your Bootcamp</h1>
+					<h1 className="font-normal text-center">Pay For Your Bootcamp</h1>
 					<p className="text-center">
-						Ready to apply for financing for your bootcamp? Choose your school to put you on the path to{' '}
-						<strong className="text-secondary">long-term success.</strong>
+						Ready to apply for financing for your bootcamp? Choose your school to get started on the path to{' '}
+						<strong className="text-secondary">a rewarding career.</strong>
 					</p>
 					<div className="flex flex-col md:flex-row items-center">
 						<Select
@@ -223,7 +227,7 @@ const IndexPage = () => {
 			<Img fluid={data.banner.childImageSharp.fluid} alt="Teal banner" />
 			<section className="flex flex-col md:flex-row md:justify-around md:items-center ">
 				<div className="md:w-1/3 p-4">
-					<h2 className="font-normal md:text-4xl">Loans to Transform your Career</h2>
+					<h2 className="font-normal md:text-4xl">Loans To Transform Your Career</h2>
 					<p>
 						Already know which school you plan to attend? Get started on your application. Not quite sure
 						which program you plan to attend? Compare your options{' '}
@@ -265,7 +269,7 @@ const IndexPage = () => {
 			</section>
 			<section className="px-4 py-8 flex flex-col items-center bg-primary-dark text-white">
 				<div className="flex flex-col items-center">
-					<h2 className="font-normal text-center md:text-4xl">Benefits of Our Partner Schools</h2>
+					<h2 className="font-normal text-center md:text-4xl">Benefits Of Our Partner Schools</h2>
 					<p className="md:w-1/2">
 						We evaluate school quality and only partner with programs worth your time and money. Our
 						education partners are committed to your success in the classroom and beyond. We look for:{' '}
@@ -343,6 +347,9 @@ const IndexPage = () => {
 						onBlur={handleInputChange}
 						value={values.comments}
 					/>
+					<div className="hidden">
+						<input type="text" name="Stakeholder Type" value="Student" readOnly />
+					</div>
 					{isFormSubmitted ? (
 						<p>Thanks for contacting us! We'll be touch shortly!</p>
 					) : (
