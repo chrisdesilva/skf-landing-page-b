@@ -181,11 +181,7 @@ const IndexPage = () => {
 						alt="Skills Fund logo"
 					/>
 				</div>
-				<div
-					className={
-						navBackground ? 'py-4 w-1/2 flex justify-end show' : 'py-4 w-1/2 flex justify-end opacity-0'
-					}
-				>
+				<div className="py-4 w-1/2 flex justify-end">
 					<a
 						href="https://my.skills.fund/register"
 						className="bg-secondary py-2 px-4 font-bold text-white text-center w-32 rounded-full cursor-pointer"
@@ -199,17 +195,18 @@ const IndexPage = () => {
 					<h1 className="font-normal text-center">Pay For Your Bootcamp</h1>
 					<p className="text-center">
 						Ready to apply for financing for your bootcamp? Choose your school to get started on the path to{' '}
+						<br />
 						<strong className="text-secondary">a rewarding career.</strong>
 					</p>
-					<div className="flex flex-col md:flex-row items-center">
+					<div className="flex flex-col items-center">
 						<Select
 							value={programLink.label}
-							className="w-48 mb-4 md:mb-0 md:mr-4"
+							className="w-64"
 							onChange={handleProgramLink}
 							options={programInfo}
 							placeholder="School name"
 						/>
-						<a
+						{/* <a
 							href="https://my.skills.fund/register"
 							className={
 								navBackground ? (
@@ -220,7 +217,7 @@ const IndexPage = () => {
 							}
 						>
 							Apply Now
-						</a>
+						</a> */}
 					</div>
 					<a
 						className={
