@@ -367,6 +367,7 @@ const IndexPage = () => {
 						<p>Thanks for contacting us! We'll be touch shortly!</p>
 					) : (
 						<input
+							id="landingPageSubmit"
 							className="bg-secondary py-2 px-4 font-bold text-white rounded-full w-48 cursor-pointer"
 							type="submit"
 							value="Submit"
