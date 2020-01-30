@@ -198,7 +198,6 @@ const IndexPage = () => {
 					<h1 className="font-normal text-center">Pay For Your Bootcamp</h1>
 					<p className="text-center">
 						Ready to apply for financing for your bootcamp? Choose your school to get started on the path to{' '}
-						<br />
 						<strong className="text-secondary">a rewarding career.</strong>
 					</p>
 					<div className="flex flex-col items-center">
