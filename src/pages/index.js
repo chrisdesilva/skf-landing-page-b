@@ -362,55 +362,27 @@ const IndexPage = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center lg:flex-row lg:p-8 w-full justify-around">
+        <div className="flex flex-col lg:flex-row lg:p-8 lg:w-full justify-around">
           <div className="lg-w-1/4">
-            <div className="flex items-center">
-              <li className="p-4 list-disc w-64 text-center mb-4">
-                Web Development
-              </li>
-            </div>
-            <div className="flex items-center">
-              <li className="p-4 list-disc w-64 text-center mb-4">
-                Data Science
-              </li>
-            </div>
+            <li className="list-disc">Web Development</li>
+            <li className="list-disc">Data Science</li>
           </div>
 
           <div className="lg-w-1/4">
-            <div className="flex items-center">
-              <li className="p-4 list-disc w-64 text-center mb-4">
-                UX/UI Design
-              </li>
-            </div>
-            <div className="flex items-center">
-              <li className="p-4 list-disc w-64 text-center mb-4">
-                Cybersecurity
-              </li>
-            </div>
+            <li className="list-disc">UX/UI Design</li>
+            <li className="list-disc">Cybersecurity</li>
           </div>
 
           <div className="lg-w-1/4">
-            <div className="flex  items-center">
-              <li className="p-4 list-disc w-64 text-center mb-4">
-                Mobile Development
-              </li>
-            </div>
-            <div className="flex  items-center">
-              <li className="p-4 list-disc w-64 text-center mb-4">
-                Healthcare
-              </li>
-            </div>
+            <li className="list-disc">Mobile Development</li>
+
+            <li className="list-disc">Healthcare</li>
           </div>
 
           <div className="lg-w-1/4">
-            <div className="flex  items-center">
-              <li className="p-4 list-disc w-64 text-center mb-4">
-                Project Management
-              </li>
-            </div>
-            <div className="flex  items-center">
-              <li className="p-4 list-disc w-64 text-center mb-4">Marketing</li>
-            </div>
+            <li className="list-disc">Project Management</li>
+
+            <li className="list-disc">Marketing</li>
           </div>
         </div>
       </section>
