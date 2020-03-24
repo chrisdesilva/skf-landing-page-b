@@ -365,53 +365,51 @@ const IndexPage = () => {
         <div className="flex flex-col items-center lg:flex-row lg:p-8 w-full justify-around">
           <div className="lg-w-1/4">
             <div className="flex items-center">
-              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+              <li className="p-4 list-disc w-64 text-center mb-4">
                 Web Development
-              </p>
+              </li>
             </div>
             <div className="flex items-center">
-              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+              <li className="p-4 list-disc w-64 text-center mb-4">
                 Data Science
-              </p>
+              </li>
             </div>
           </div>
 
           <div className="lg-w-1/4">
             <div className="flex items-center">
-              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+              <li className="p-4 list-disc w-64 text-center mb-4">
                 UX/UI Design
-              </p>
+              </li>
             </div>
             <div className="flex items-center">
-              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+              <li className="p-4 list-disc w-64 text-center mb-4">
                 Cybersecurity
-              </p>
+              </li>
             </div>
           </div>
 
           <div className="lg-w-1/4">
             <div className="flex  items-center">
-              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+              <li className="p-4 list-disc w-64 text-center mb-4">
                 Mobile Development
-              </p>
+              </li>
             </div>
             <div className="flex  items-center">
-              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+              <li className="p-4 list-disc w-64 text-center mb-4">
                 Healthcare
-              </p>
+              </li>
             </div>
           </div>
 
           <div className="lg-w-1/4">
             <div className="flex  items-center">
-              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+              <li className="p-4 list-disc w-64 text-center mb-4">
                 Project Management
-              </p>
+              </li>
             </div>
             <div className="flex  items-center">
-              <p className="p-4 border-2 rounded w-64 text-center mb-4">
-                Marketing
-              </p>
+              <li className="p-4 list-disc w-64 text-center mb-4">Marketing</li>
             </div>
           </div>
         </div>
