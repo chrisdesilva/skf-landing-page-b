@@ -224,18 +224,6 @@ const IndexPage = () => {
                 Apply Now
               </a>
             </div>
-            {/* <a
-							href="https://my.skills.fund/register"
-							className={
-								navBackground ? (
-									'bg-secondary py-2 px-4 font-bold text-white text-center w-32 rounded-full cursor-pointer opacity-0'
-								) : (
-									'bg-secondary py-2 px-4 font-bold text-white text-center w-32 rounded-full cursor-pointer show'
-								)
-							}
-						>
-							Apply Now
-						</a> */}
           </div>
           <a
             className={
@@ -360,6 +348,71 @@ const IndexPage = () => {
             <p className="text-center">
               Impressive student <br /> outcomes
             </p>
+          </div>
+        </div>
+      </section>
+      <section className="px-4 py-16 flex flex-col items-center bg-gray-100">
+        <div className="lg:w-1/2">
+          <h2 className="font-normal text-center lg:text-4xl">
+            Launch Your New Career
+          </h2>
+          <p className="font-normal text-center ">
+            Get the skills training you need to launch your career. <br />
+            We partner with schools dedicated to the following fields:
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center lg:flex-row lg:p-8 w-full justify-around">
+          <div className="lg-w-1/4">
+            <div className="flex items-center">
+              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+                Web Development
+              </p>
+            </div>
+            <div className="flex items-center">
+              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+                Data Science
+              </p>
+            </div>
+          </div>
+
+          <div className="lg-w-1/4">
+            <div className="flex items-center">
+              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+                UX/UI Design
+              </p>
+            </div>
+            <div className="flex items-center">
+              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+                Cybersecurity
+              </p>
+            </div>
+          </div>
+
+          <div className="lg-w-1/4">
+            <div className="flex  items-center">
+              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+                Mobile Development
+              </p>
+            </div>
+            <div className="flex  items-center">
+              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+                Healthcare
+              </p>
+            </div>
+          </div>
+
+          <div className="lg-w-1/4">
+            <div className="flex  items-center">
+              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+                Project Management
+              </p>
+            </div>
+            <div className="flex  items-center">
+              <p className="p-4 border-2 rounded w-64 text-center mb-4">
+                Marketing
+              </p>
+            </div>
           </div>
         </div>
       </section>
