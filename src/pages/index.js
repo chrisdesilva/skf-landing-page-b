@@ -235,7 +235,7 @@ const IndexPage = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            Learn More
+            See My Payment Options
           </a>
         </div>
       </header>
