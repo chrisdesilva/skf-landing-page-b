@@ -191,6 +191,13 @@ export const programInfo = [
     },
   },
   {
+    label: "Emerson College",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=stackeducation5",
+      site: "https://emerson.skills.fund/",
+    },
+  },
+  {
     label: "Epicodus",
     value: {
       code: "https://my.skills.fund/application?schoolCode=epicodus",
@@ -212,6 +219,13 @@ export const programInfo = [
     },
   },
   {
+    label: "Framingham State University",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=stackeducation1",
+      site: "https://framinghamstate.skills.fund/",
+    },
+  },
+  {
     label: "Cal Poly Extended Education Coding Bootcamp",
     value: {
       code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
@@ -223,6 +237,13 @@ export const programInfo = [
     value: {
       code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
       site: "https://unfcodingbootcamp.skills.fund",
+    },
+  },
+  {
+    label: "Fullstack's LSU Coding Bootcamp",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
+      site: "https://lsubootcamp.skills.fund",
     },
   },
   {
@@ -452,6 +473,20 @@ export const programInfo = [
     },
   },
   {
+    label: "St. Joseph's College of Maine",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=stackeducation2",
+      site: "https://sjcme.skills.fund/",
+    },
+  },
+  {
+    label: "Suffolk University",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=stackeducation4",
+      site: "https://suffolk.skills.fund/",
+    },
+  },
+  {
     label: "The Tech Academy",
     value: {
       code: "https://my.skills.fund/application?schoolCode=techacademy",
@@ -498,6 +533,13 @@ export const programInfo = [
     value: {
       code: "https://my.skills.fund/application?schoolCode=emeritus2",
       site: "https://wharton.skills.fund",
+    },
+  },
+  {
+    label: "Worcester State University",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=stackeducation3",
+      site: "https://worcesterstate.skills.fund/",
     },
   },
 ]
