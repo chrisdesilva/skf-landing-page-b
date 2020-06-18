@@ -121,10 +121,24 @@ export const programInfo = [
     },
   },
   {
+    label: "Coding Temple",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=codingtemple",
+      site: "https://codingtemple.skills.fund/",
+    },
+  },
+  {
     label: "Covalence",
     value: {
       code: "https://my.skills.fund/application?schoolCode=covalence",
       site: "https://covalence.skills.fund",
+    },
+  },
+  {
+    label: "CyberWarrior Academy",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=cyberwarrioracademy",
+      site: "https://cyberwarrior.skills.fund/",
     },
   },
   {
@@ -230,6 +244,13 @@ export const programInfo = [
     value: {
       code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
       site: "https://calpolyextendedbootcamp.skills.fund",
+    },
+  },
+  {
+    label: "Fullstack's Caltech Bootcamp",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
+      site: "https://caltech.skills.fund/",
     },
   },
   {
@@ -346,10 +367,17 @@ export const programInfo = [
     },
   },
   {
-    label: "Momentum Learning",
+    label: "Momentum",
     value: {
       code: "https://my.skills.fund/application?schoolCode=momentumlearning",
       site: "https://momentumlearn.skills.fund",
+    },
+  },
+  {
+    label: "Momentum at Morehouse",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=momentumlearning",
+      site: "https://momentumatmorehouse.skills.fund/",
     },
   },
   {
