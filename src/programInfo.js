@@ -42,6 +42,13 @@ export const programInfo = [
     },
   },
   {
+    label: "Becker College",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=quickstartlearning4",
+      site: "https://becker.skills.fund",
+    },
+  },
+  {
     label: "Bethel Tech",
     value: {
       code: "https://my.skills.fund/application?schoolCode=betheltech",
@@ -226,6 +233,13 @@ export const programInfo = [
     },
   },
   {
+    label: "Florida Atlantic University",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=quickstartlearning1",
+      site: "https://fau.skills.fund",
+    },
+  },
+  {
     label: "Flatiron",
     value: {
       code: "https://my.skills.fund/application?schoolCode=flatironschool",
@@ -393,6 +407,13 @@ export const programInfo = [
       code:
         "https://my.skills.fund/application?schoolCode=nashvillesoftwareschool",
       site: "https://nashvillesoftwareschool.skills.fund",
+    },
+  },
+  {
+    label: "NEIU",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=quickstartlearning5",
+      site: "https://neiu.skills.fund",
     },
   },
   {
