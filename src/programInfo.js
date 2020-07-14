@@ -585,13 +585,6 @@ export const programInfo = [
     },
   },
   {
-    label: "Wharton",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=emeritus2",
-      site: "https://wharton.skills.fund",
-    },
-  },
-  {
     label: "Worcester State University",
     value: {
       code: "https://my.skills.fund/application?schoolCode=stackeducation3",
