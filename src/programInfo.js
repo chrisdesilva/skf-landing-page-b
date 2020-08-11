@@ -345,6 +345,13 @@ export const programInfo = [
     },
   },
   {
+    label: "Kellogg",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=emeritus3",
+      site: "https://kellogg.skills.fund",
+    },
+  },
+  {
     label: "Launch Academy",
     value: {
       code: "https://my.skills.fund/application?schoolCode=launchacademy",
