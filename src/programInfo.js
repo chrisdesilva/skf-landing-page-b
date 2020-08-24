@@ -352,6 +352,13 @@ export const programInfo = [
     },
   },
   {
+    label: "Kenzie",
+    value: {
+      code: "https://my.skills.fund/application?lenderCode=SKFKAUDPT20",
+      site: "https://kenzie.skills.fund",
+    },
+  },
+  {
     label: "Launch Academy",
     value: {
       code: "https://my.skills.fund/application?schoolCode=launchacademy",
