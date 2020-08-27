@@ -282,6 +282,13 @@ export const programInfo = [
     },
   },
   {
+    label: "Fullstack's Virginia Tech Coding Bootcamp",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
+      site: "https://vatechbootcamp.skills.fund",
+    },
+  },
+  {
     label: "Fullstack Academy",
     value: {
       code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
