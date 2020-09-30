@@ -452,13 +452,6 @@ export const programInfo = [
     },
   },
   {
-    label: "Open Cloud Academy",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=opencloudacademy",
-      site: "https://opencloudacademy.skills.fund",
-    },
-  },
-  {
     label: "Operation Spark",
     value: {
       code: "https://my.skills.fund/application?schoolCode=operationspark",
@@ -491,6 +484,13 @@ export const programInfo = [
     value: {
       code: "https://my.skills.fund/application?schoolCode=punchcode",
       site: "https://punchcode.skills.fund",
+    },
+  },
+  {
+    label: "Rackspace Cloud Academy",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=opencloudacademy",
+      site: "https://rca.skills.fund",
     },
   },
   {
