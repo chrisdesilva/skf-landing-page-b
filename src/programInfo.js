@@ -423,6 +423,44 @@ export const programInfo = [
     },
   },
   {
+    label: "New Horizons Allentown",
+    value: {
+      code:
+        "https://my.skills.fund/application?schoolCode=newhorizonspennsylvania2",
+      site: "https://nhnepa.skills.fund",
+    },
+  },
+  {
+    label: "New Horizons Orlando",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=newhorizonsorlando1",
+      site: "https://NHFLCenPanGulf.skills.fund",
+    },
+  },
+  {
+    label: "New Horizons Reading",
+    value: {
+      code:
+        "https://my.skills.fund/application?schoolCode=newhorizonspennsylvania3",
+      site: "https://nhnepa.skills.fund",
+    },
+  },
+  {
+    label: "New Horizons Tampa",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=newhorizonsorlando2",
+      site: "https://NHFLCenPanGulf.skills.fund",
+    },
+  },
+  {
+    label: "New Horizons Wilkes-Barre",
+    value: {
+      code:
+        "https://my.skills.fund/application?schoolCode=newhorizonspennsylvania1",
+      site: "https://nhnepa.skills.fund",
+    },
+  },
+  {
     label: "Nashville Software School",
     value: {
       code:
