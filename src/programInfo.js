@@ -240,7 +240,7 @@ export const programInfo = [
     },
   },
   {
-    label: "Flatiron",
+    label: "Flatiron School",
     value: {
       code: "https://my.skills.fund/application?schoolCode=flatironschool",
       site: "https://flatironschool.skills.fund",
