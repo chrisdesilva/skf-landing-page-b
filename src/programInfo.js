@@ -268,6 +268,13 @@ export const programInfo = [
     },
   },
   {
+    label: "Fullstack's UIC Coding Bootcamp",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
+      site: "https://uicbootcamp.skills.fund",
+    },
+  },
+  {
     label: "Fullstack's UNF Coding Bootcamp",
     value: {
       code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
@@ -330,13 +337,13 @@ export const programInfo = [
       site: "https://heliotraining.skills.fund",
     },
   },
-  {
-    label: "Insight",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=insightdatascience",
-      site: "https://insight.skills.fund",
-    },
-  },
+  // {
+  //   label: "Insight",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=insightdatascience",
+  //     site: "https://insight.skills.fund",
+  //   },
+  // },
   {
     label: "Inventive Academy",
     value: {
@@ -578,6 +585,13 @@ export const programInfo = [
     value: {
       code: "https://my.skills.fund/application?schoolCode=techelevator",
       site: "https://techelevator.skills.fund",
+    },
+  },
+  {
+    label: "The Data Incubator",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=thedataincubator",
+      site: "https://thedataincubator.skills.fund",
     },
   },
   {
