@@ -13,20 +13,20 @@ export const programInfo = [
       site: "https://suncoast.skills.fund",
     },
   },
-  {
-    label: "ADAPT",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=adapt",
-      site: "https://adaptdental.skills.fund",
-    },
-  },
-  {
-    label: "ADTC",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=americandiesel",
-      site: "https://adtc.skills.fund",
-    },
-  },
+  // {
+  //   label: "ADAPT",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=adapt",
+  //     site: "https://adaptdental.skills.fund",
+  //   },
+  // },
+  // {
+  //   label: "ADTC",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=americandiesel",
+  //     site: "https://adtc.skills.fund",
+  //   },
+  // },
   {
     label: "Alchemy Code Lab",
     value: {
@@ -482,13 +482,13 @@ export const programInfo = [
       site: "https://neiu.skills.fund",
     },
   },
-  {
-    label: "NIMAA",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=nimaa",
-      site: "https://nimaa.skills.fund",
-    },
-  },
+  // {
+  //   label: "NIMAA",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=nimaa",
+  //     site: "https://nimaa.skills.fund",
+  //   },
+  // },
   {
     label: "NYC Data Science Academy",
     value: {
@@ -573,13 +573,13 @@ export const programInfo = [
       site: "https://secureset.skills.fund",
     },
   },
-  {
-    label: "Smith & Solomon",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=smithsolomon",
-      site: "https://smithsolomon.skills.fund",
-    },
-  },
+  // {
+  //   label: "Smith & Solomon",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=smithsolomon",
+  //     site: "https://smithsolomon.skills.fund",
+  //   },
+  // },
   {
     label: "Tech Elevator",
     value: {
