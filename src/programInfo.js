@@ -48,6 +48,13 @@ export const programInfo = [
       site: "https://becker.skills.fund",
     },
   },
+  // {
+  //   label: "Berkeley",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=emeritus6",
+  //     site: "https://berkeley.skills.fund",
+  //   },
+  // },
   {
     label: "Bethel Tech",
     value: {
@@ -55,13 +62,13 @@ export const programInfo = [
       site: "https://betheltech.skills.fund",
     },
   },
-  {
-    label: "Bloc",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=bloc",
-      site: "https://bloc.skills.fund",
-    },
-  },
+  // {
+  //   label: "Bloc",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=bloc",
+  //     site: "https://bloc.skills.fund",
+  //   },
+  // },
   {
     label: "BoiseCodeWorks",
     value: {
@@ -409,6 +416,13 @@ export const programInfo = [
     },
   },
   {
+    label: "MIT",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=emeritus4",
+      site: "https://mit.skills.fund",
+    },
+  },
+  {
     label: "Momentum",
     value: {
       code: "https://my.skills.fund/application?schoolCode=momentumlearning",
@@ -497,6 +511,13 @@ export const programInfo = [
     },
   },
   {
+    label: "NYU's Tandon School of Engineering",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=emeritus5",
+      site: "https://nyutandon.skills.fund",
+    },
+  },
+  {
     label: "Operation Spark",
     value: {
       code: "https://my.skills.fund/application?schoolCode=operationspark",
@@ -580,6 +601,13 @@ export const programInfo = [
   //     site: "https://smithsolomon.skills.fund",
   //   },
   // },
+  {
+    label: "Springboard",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=springboard",
+      site: "https://springboard.skills.fund",
+    },
+  },
   {
     label: "Tech Elevator",
     value: {
