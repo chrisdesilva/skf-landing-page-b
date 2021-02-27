@@ -150,6 +150,20 @@ export const programInfo = [
     },
   },
   {
+    label: "CSU (Colorado State University)",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy13",
+      site: "https://csubootcamp.skills.fund",
+    },
+  },
+  {
+    label: "CSUEB (California State University, East Bay)",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy14",
+      site: "https://csuebbootcamp.skills.fund",
+    },
+  },
+  {
     label: "Covalence",
     value: {
       code: "https://my.skills.fund/application?schoolCode=covalence",
