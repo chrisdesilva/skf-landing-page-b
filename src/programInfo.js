@@ -98,21 +98,29 @@ export const programInfo = [
       site: "https://careerfoundry.skills.fund",
     },
   },
+  // {
+  //   label: "Carolina Career College",
+  //   value: {
+  //     code:
+  //       "https://my.skills.fund/application?schoolCode=carolinacareercollege",
+  //     site: "https://carolinacareercollege.skills.fund",
+  //   },
+  // },
   {
-    label: "Carolina Career College",
+    label: "Carolina Code School",
     value: {
       code:
-        "https://my.skills.fund/application?schoolCode=carolinacareercollege",
-      site: "https://carolinacareercollege.skills.fund",
+        "https://my.skills.fund/application?schoolCode=carolinacodeschool",
+      site: "https://carolinacodeschool.skills.fund",
     },
   },
-  {
-    label: "Code Fellows",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=codefellows",
-      site: "https://codefellows.skills.fund",
-    },
-  },
+  // {
+  //   label: "Code Fellows",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=codefellows",
+  //     site: "https://codefellows.skills.fund",
+  //   },
+  // },
   {
     label: "Codesmith",
     value: {
@@ -156,6 +164,13 @@ export const programInfo = [
     },
   },
   {
+    label: "Data Science Dojo",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=datasciencedojo",
+      site: "https://datasciencedojo.skills.fund",
+    },
+  },
+  {
     label: "Dartmouth",
     value: {
       code: "https://my.skills.fund/application?schoolCode=emeritus1",
@@ -169,13 +184,13 @@ export const programInfo = [
       site: "https://deltavcodeschool.skills.fund",
     },
   },
-  {
-    label: "Designation",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=designation",
-      site: "https://designation.skills.fund",
-    },
-  },
+  // {
+  //   label: "Designation",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=designation",
+  //     site: "https://designation.skills.fund",
+  //   },
+  // },
   {
     label: "devCodeCamp",
     value: {
@@ -222,6 +237,13 @@ export const programInfo = [
     label: "Emerson College",
     value: {
       code: "https://my.skills.fund/application?schoolCode=stackeducation5",
+      site: "https://emorybootcamp.skills.fund/",
+    },
+  },
+  {
+    label: "Emory University",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy10",
       site: "https://emerson.skills.fund/",
     },
   },
@@ -263,42 +285,42 @@ export const programInfo = [
   {
     label: "Cal Poly Extended Education Coding Bootcamp",
     value: {
-      code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy1",
       site: "https://calpolyextendedbootcamp.skills.fund",
     },
   },
   {
-    label: "Fullstack's Caltech Bootcamp",
+    label: "Caltech",
     value: {
-      code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy7",
       site: "https://caltech.skills.fund/",
     },
   },
   {
-    label: "Fullstack's UIC Coding Bootcamp",
+    label: "UIC (University of Illinois Chicago)",
     value: {
-      code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy12",
       site: "https://uicbootcamp.skills.fund",
     },
   },
   {
-    label: "Fullstack's UNF Coding Bootcamp",
+    label: "UNF (University of North Florida)",
     value: {
-      code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy4",
       site: "https://unfcodingbootcamp.skills.fund",
     },
   },
   {
-    label: "Fullstack's LSU Coding Bootcamp",
+    label: "LSU (Louisiana State University)",
     value: {
-      code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy6",
       site: "https://lsubootcamp.skills.fund",
     },
   },
   {
-    label: "Fullstack's Virginia Tech Coding Bootcamp",
+    label: "Virginia Tech",
     value: {
-      code: "https://my.skills.fund/application?schoolCode=fullstackacademy",
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy9",
       site: "https://vatechbootcamp.skills.fund",
     },
   },
@@ -525,6 +547,13 @@ export const programInfo = [
     },
   },
   {
+    label: "Parsity",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=parsity",
+      site: "https://parsity.skills.fund",
+    },
+  },
+  {
     label: "PDX Code Guild",
     value: {
       code: "https://my.skills.fund/application?schoolCode=pdxcodeguild",
@@ -538,13 +567,13 @@ export const programInfo = [
       site: "https://primeacademy.skills.fund",
     },
   },
-  {
-    label: "Project Shift",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=projectshift",
-      site: "https://projectshift.skills.fund",
-    },
-  },
+  // {
+  //   label: "Project Shift",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=projectshift",
+  //     site: "https://projectshift.skills.fund",
+  //   },
+  // },
   {
     label: "PunchCode",
     value: {
@@ -585,6 +614,13 @@ export const programInfo = [
     value: {
       code: "https://my.skills.fund/application?schoolCode=sabio",
       site: "https://sabionational.skills.fund",
+    },
+  },
+  {
+    label: "San Jose State University",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy11",
+      site: "https://sjsubootcamp.skills.fund",
     },
   },
   {
@@ -630,19 +666,26 @@ export const programInfo = [
     },
   },
   {
+    label: "Saint Joseph's University",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=stackeducation7",
+      site: "https://stjosephs.skills.fund/",
+    },
+  },
+  {
     label: "St. Joseph's College of Maine",
     value: {
       code: "https://my.skills.fund/application?schoolCode=stackeducation2",
       site: "https://sjcme.skills.fund/",
     },
   },
-  {
-    label: "Suffolk University",
-    value: {
-      code: "https://my.skills.fund/application?schoolCode=stackeducation4",
-      site: "https://suffolk.skills.fund/",
-    },
-  },
+  // {
+  //   label: "Suffolk University",
+  //   value: {
+  //     code: "https://my.skills.fund/application?schoolCode=stackeducation4",
+  //     site: "https://suffolk.skills.fund/",
+  //   },
+  // },
   {
     label: "The Tech Academy",
     value: {
@@ -669,6 +712,27 @@ export const programInfo = [
     value: {
       code: "https://my.skills.fund/application?schoolCode=turing",
       site: "https://turing.skills.fund",
+    },
+  },
+  {
+    label: "University of Hartford",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=stackeducation6",
+      site: "https://hartford.skills.fund",
+    },
+  },
+  {
+    label: "University of Oklahoma",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy8",
+      site: "https://oubootcamp.skills.fund",
+    },
+  },
+  {
+    label: "University of San Diego",
+    value: {
+      code: "https://my.skills.fund/application?schoolCode=fullstackacademy5",
+      site: "https://usdbootcamp.skills.fund",
     },
   },
   {
