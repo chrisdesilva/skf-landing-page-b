@@ -251,14 +251,14 @@ export const programInfo = [
     label: "Emerson College",
     value: {
       code: "https://my.skills.fund/application?schoolCode=stackeducation5",
-      site: "https://emorybootcamp.skills.fund/",
+      site: "https://emerson.skills.fund/",
     },
   },
   {
     label: "Emory University",
     value: {
       code: "https://my.skills.fund/application?schoolCode=fullstackacademy10",
-      site: "https://emerson.skills.fund/",
+      site: "https://emorybootcamp.skills.fund/",
     },
   },
   {
